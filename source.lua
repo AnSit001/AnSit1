@@ -9,6 +9,15 @@ local Core = (gethui and gethui()) or game:FindFirstChild'CoreGui' or LocalPlaye
 local UIS = game:GetService('UserInputService')
 local TextService = game:GetService('TextService')
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
+local soundId = "rbxassetid://4807489774"
+local sound = Instance.new("Sound")
+
+sound.SoundId = soundId
+sound.Parent = game.Workspace
+
+local function playSound()
+    sound:Play()
+end
 
 local function cretate_button(asd)
 	local button=Instance.new('TextButton')
@@ -166,6 +175,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(284, 4)
 		image.ImageRectSize = Vector2.new(24, 24)
+		playSound()
 		return
 	end
 
@@ -2026,8 +2036,10 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 
 		if Status then
 			buton.Visible = false
+			playSound()
 		else
 			buton.Visible = true
+			playSound()
 		end
 
 		UIToggle(Status)
