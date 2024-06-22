@@ -9,14 +9,14 @@ local Core = (gethui and gethui()) or game:FindFirstChild'CoreGui' or LocalPlaye
 local UIS = game:GetService('UserInputService')
 local TextService = game:GetService('TextService')
 local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
-local soundId = "rbxassetid://4807489774"
-local sound = Instance.new("Sound")
+local soundIdClose = "rbxassetid://4807489774"
+local soundClose = Instance.new("Sound")
 
-sound.SoundId = soundId
-sound.Parent = game.Workspace
+soundClose.SoundId = soundIdClose
+soundClose.Parent = game.Workspace
 
-local function playSound()
-    sound:Play()
+local function CloseSSound()
+    soundClose:Play()
 end
 
 local function cretate_button(asd)
@@ -119,6 +119,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(205,565)
 		image.ImageRectSize = Vector2.new(35,35)
+		CloseSound()
 		return
 	end
 
@@ -126,6 +127,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(485,205)
 		image.ImageRectSize = Vector2.new(35,35)
+		CloseSound()
 		return
 	end
 
@@ -133,6 +135,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(805,45)
 		image.ImageRectSize = Vector2.new(35,35)
+		CloseSound()
 		return
 	end
 
@@ -140,6 +143,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(604,324)
 		image.ImageRectSize = Vector2.new(35,35)
+		CloseSound()
 		return
 	end
 
@@ -147,6 +151,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(524, 644)
 		image.ImageRectSize = Vector2.new(35,35)
+		CloseSound()
 		return
 	end
 
@@ -154,6 +159,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(964, 205)
 		image.ImageRectSize = Vector2.new(35,35)
+		CloseSound()
 		return
 	end
 
@@ -161,6 +167,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(325, 565)
 		image.ImageRectSize = Vector2.new(35,35)
+		CloseSound()
 		return
 	end
 
@@ -168,6 +175,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(325, 565)
 		image.ImageRectSize = Vector2.new(35,35)
+		CloseSound()
 		return
 	end
 
@@ -175,7 +183,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(284, 4)
 		image.ImageRectSize = Vector2.new(24, 24)
-		playSound()
+		CloseSound()
 		return
 	end
 
@@ -183,6 +191,7 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(44, 964)
 		image.ImageRectSize = Vector2.new(36, 36)
+		CloseSound()
 		return
 	end
 
