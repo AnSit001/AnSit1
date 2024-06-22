@@ -119,7 +119,6 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(205,565)
 		image.ImageRectSize = Vector2.new(35,35)
-		CloseSound()
 		return
 	end
 
@@ -127,7 +126,6 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(485,205)
 		image.ImageRectSize = Vector2.new(35,35)
-		CloseSound()
 		return
 	end
 
@@ -135,7 +133,6 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(805,45)
 		image.ImageRectSize = Vector2.new(35,35)
-		CloseSound()
 		return
 	end
 
@@ -143,7 +140,6 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(604,324)
 		image.ImageRectSize = Vector2.new(35,35)
-		CloseSound()
 		return
 	end
 
@@ -151,7 +147,6 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(524, 644)
 		image.ImageRectSize = Vector2.new(35,35)
-		CloseSound()
 		return
 	end
 
@@ -159,7 +154,6 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(964, 205)
 		image.ImageRectSize = Vector2.new(35,35)
-		CloseSound()
 		return
 	end
 
@@ -167,7 +161,6 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(325, 565)
 		image.ImageRectSize = Vector2.new(35,35)
-		CloseSound()
 		return
 	end
 
@@ -175,7 +168,6 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(325, 565)
 		image.ImageRectSize = Vector2.new(35,35)
-		CloseSound()
 		return
 	end
 
@@ -191,7 +183,6 @@ local function SetImage(name:string,image:ImageLabel)
 		image.Image = NigImage
 		image.ImageRectOffset = Vector2.new(44, 964)
 		image.ImageRectSize = Vector2.new(36, 36)
-		CloseSound()
 		return
 	end
 
