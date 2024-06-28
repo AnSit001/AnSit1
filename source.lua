@@ -2036,10 +2036,8 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 
 		if Status then
 			buton.Visible = false
-			playSound()
 		else
 			buton.Visible = true
-			playSound()
 		end
 
 		UIToggle(Status)
