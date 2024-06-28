@@ -12,10 +12,49 @@ local ProtectGui = protectgui or (syn and syn.protect_gui) or (function() end);
 local soundIdClose = "rbxassetid://4807489774"
 local soundClose = Instance.new("Sound")
 
+
+
+local buttonPressSoundId = "rbxassetid://656998369"
+local toggleOnSoundId = "rbxassetid://171279079"
+local toggleOffSoundId = "rbxassetid://171279079"
+local closeSoundId = "rbxassetid://4807489774"
+
+local bPressS = Instance.new("Sound")
+buttonPressSound.SoundId = buttonPressSoundId
+buttonPressSound.Parent = game.SoundService
+
+local tOnS = Instance.new("Sound")
+toggleOnSound.SoundId = toggleOnSoundId
+toggleOnSound.Parent = game.SoundService
+
+local tOffS = Instance.new("Sound")
+toggleOffSound.SoundId = toggleOffSoundId
+toggleOffSound.Parent = game.SoundService
+
+local closeS = Instance.new("Sound")
+closeSound.SoundId = closeSoundId
+closeSound.Parent = game.SoundService
+
 soundClose.SoundId = soundIdClose
 soundClose.Parent = game.Workspace
 
-local function CloseSSound()
+local function BPressSound()
+    bPressS:Play()
+end
+
+local function TOnSound()
+    tOnS:Play()
+end
+
+local function TOffPlay()
+	tOffS:Play()
+end
+
+local function CSound()
+    closeS:Play()
+end
+
+local function CloseSound()
     soundClose:Play()
 end
 
@@ -760,8 +799,10 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 			for i,v in ipairs(HyperWindow.Tabs) do
 				if v[1] == TabFrame then
 					task.spawn(v[2],true)
+					BPressSound()
 				else
 					task.spawn(v[2],false)
+					BPressSound()
 				end
 			end
 		end)
@@ -1119,6 +1160,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				Effect(Default)
 
 				Button.MouseButton1Click:Connect(function()
+					BPressSound()
 					Default = not Default
 					Effect(Default)
 					callback(Default)
@@ -1280,6 +1322,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 
 				Button.MouseButton1Click:Connect(function()
 					if BindConnect then
+						BPressSound()
 						return
 					end
 
@@ -1793,6 +1836,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 						ubtton.MouseButton1Click:Connect(function()
 							if lastui then
 								Tween:Create(lastui,TweenInfo.new(0.1),{BackgroundTransparency = 1,Size = UDim2.new(0, 0, 0.800000012, 0)}):Play()
+								BPressSound()
 
 							end
 
@@ -1821,6 +1865,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 				Button.MouseButton1Click:Connect(function()
 					valnow = not valnow
 					Toggle(valnow)
+					BPressSound()
 				end)
 
 				return Signal({
@@ -2032,6 +2077,7 @@ function NoHyper.new(WindowName,WindowLogo,WindowDescription)
 	end)
 
 	CloseButton.MouseButton1Click:Connect(function()
+		CSound()
 		Status = not Status
 
 		if Status then
